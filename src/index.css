@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-handwriting {
+  font-family: 'Nanum Pen Script', 'Gaegu', cursive, sans-serif;
+}
+
+.font-gaegu {
+  font-family: 'Gaegu', cursive, sans-serif;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(217, 119, 6, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 119, 6, 0.4);
+}
+
+/* Breathing animation */
+@keyframes breatheCycle {
+  0% { transform: scale(1); opacity: 0.7; }
+  22.2% { transform: scale(1.4); opacity: 1; } /* 4s inhale */
+  61.1% { transform: scale(1.4); opacity: 0.95; } /* 7s hold */
+  100% { transform: scale(1); opacity: 0.7; } /* 8s exhale */
+}
+
+.animate-breathe {
+  animation: breatheCycle 19s ease-in-out infinite;
+}
+
+/* Paper shredder animation */
+@keyframes shredPaper {
+  0% { transform: translateY(0) scaleY(1); opacity: 1; }
+  50% { transform: translateY(30px) scaleY(0.7); opacity: 0.8; }
+  100% { transform: translateY(80px) scaleY(0); opacity: 0; }
+}
+
+.animate-shred {
+  animation: shredPaper 1.2s forwards ease-in;
+}
+
+/* Soft floating animation */
+@keyframes softFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: softFloat 4s ease-in-out infinite;
+}

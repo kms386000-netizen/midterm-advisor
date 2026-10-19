@@ -1,0 +1,8 @@
+{
+  "name": "포근이 - 중간고사 대학생 마음 쉼터 & 응원 상담소",
+  "description": "중간고사로 지치고 불안한 대학생들을 위한 따뜻한 공감 상담, 벼락치기 멘탈 케어, 시험 응원 부적과 이완 쉼터",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
